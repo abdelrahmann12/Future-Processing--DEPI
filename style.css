@@ -330,16 +330,16 @@ footer {
         padding-bottom: 20px;
         position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 5px;
-        left: 20px;
-        transform: translate(-50%, -50%);
-        height: 4px;
-        width: 40px;
-        background-color: #ff6000;
-      }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 5px;
+          left: 20px;
+          transform: translate(-50%, -50%);
+          height: 4px;
+          width: 40px;
+          background-color: #ff6000;
+        }
       }
       .links {
         display: flex;
@@ -500,3 +500,80 @@ footer {
     }
   }
 }
+
+.last-footer {
+  text-align: center;
+  padding: 1px 0;
+
+  p {
+    color: white;
+    font-size: 10px;
+
+    span {
+      color: #ff6000;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 0 20px;
+  }
+
+
+  header .container nav ul {
+    display: none;
+  }
+
+  .hero {
+    height: 100vh;
+
+    .container {
+      svg.wifi {
+        display: none;
+      }
+
+      svg.circle {
+        display: none;
+      }
+      .content {
+        img {
+          width: 300px;
+        }
+
+        flex-direction: column;
+      }
+    }
+  }
+
+  /* cards */
+  .cards .container {
+    flex-direction: column;
+    align-items: center;
+    
+    .card {
+      width: 100%;
+      border: rgba(0, 0, 0, 0.278) 1px solid;
+    }
+
+  }
+  /* end cards */
+
+  .talk {
+    width: 100%;
+
+    form {
+      .f-block,
+      .s-block {
+        flex-direction: column;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
